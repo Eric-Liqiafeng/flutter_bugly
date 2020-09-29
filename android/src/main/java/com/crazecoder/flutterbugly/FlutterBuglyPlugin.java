@@ -98,6 +98,7 @@ public class FlutterBuglyPlugin implements MethodCallHandler {
                         Bugly.setAppChannel(activity.getApplicationContext(), channel);
                 }
                 result(getResultBean(true, appId, "Bugly 初始化成功"));
+                CrashReport.testJavaCrash();
             } else {
                 result(getResultBean(false, null, "Bugly appId不能为空"));
             }
